@@ -14,6 +14,6 @@
 ![LangChain](https://img.shields.io/badge/LangChain-Master-00C853?style=for-the-badge)
 
 ### 📊 ACTIVITY
-![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=hekuang857-byte&bg_color=0d1117&color=00fff0&line=00fff0&point=ffffff&hide_border=true&no-cache=true)
+![GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=Heykode&bg_color=0d1117&color=00fff0&line=00fff0&point=ffffff&hide_border=true&no-cache=true)
 
 </div>
