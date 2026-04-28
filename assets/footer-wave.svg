@@ -1,22 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 110" width="900" height="110" role="img" aria-labelledby="title">
-  <title id="title">Neon footer wave</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 64" width="900" height="64" role="img" aria-labelledby="title">
+  <title id="title">Flowing neon footer wave</title>
   <defs>
-    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#00d4ff" stop-opacity="0" />
-      <stop offset="0.35" stop-color="#00d4ff" stop-opacity="0.72" />
-      <stop offset="0.7" stop-color="#7c3aed" stop-opacity="0.76" />
+      <stop offset="0.28" stop-color="#00d4ff" stop-opacity="0.78" />
+      <stop offset="0.58" stop-color="#7c3aed" stop-opacity="0.82" />
       <stop offset="1" stop-color="#7c3aed" stop-opacity="0" />
     </linearGradient>
-    <filter id="blur" x="-10%" y="-40%" width="120%" height="180%">
-      <feGaussianBlur stdDeviation="7" />
+    <linearGradient id="softGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7c3aed" stop-opacity="0" />
+      <stop offset="0.5" stop-color="#00d4ff" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#7c3aed" stop-opacity="0" />
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-60%" width="120%" height="220%">
+      <feGaussianBlur stdDeviation="5" />
     </filter>
     <style>
-      @keyframes glow { 0%, 100% { opacity: .36; } 50% { opacity: .82; } }
-      .glow { animation: glow 3.6s ease-in-out infinite; }
+      @keyframes flowRight { from { transform: translateX(-450px); } to { transform: translateX(0); } }
+      @keyframes flowLeft { from { transform: translateX(0); } to { transform: translateX(-450px); } }
+      @keyframes pulse { 0%, 100% { opacity: .42; } 50% { opacity: .82; } }
+      .right { animation: flowRight 7s linear infinite; }
+      .left { animation: flowLeft 10s linear infinite; }
+      .pulse { animation: pulse 3.8s ease-in-out infinite; }
     </style>
   </defs>
-  <rect width="900" height="110" fill="#0d1117" opacity="0" />
-  <path class="glow" d="M0 70 C90 18 180 18 270 70 S450 122 540 70 720 18 900 70" fill="none" stroke="url(#wave)" stroke-width="5" filter="url(#blur)" />
-  <path d="M0 70 C90 18 180 18 270 70 S450 122 540 70 720 18 900 70" fill="none" stroke="url(#wave)" stroke-width="2.2" />
-  <path d="M0 92 C140 52 220 52 360 92 S590 132 900 82" fill="none" stroke="#30363d" stroke-width="1.2" opacity="0.58" />
+
+  <rect width="900" height="64" fill="#0d1117" opacity="0" />
+
+  <g class="right pulse" filter="url(#glow)" opacity="0.55">
+    <path d="M-450 39 C-375 15 -300 15 -225 39 S-75 63 0 39 150 15 225 39 375 63 450 39 600 15 675 39 825 63 900 39 1050 15 1125 39 1275 63 1350 39" fill="none" stroke="url(#waveGrad)" stroke-width="8" stroke-linecap="round" />
+  </g>
+
+  <g class="right">
+    <path d="M-450 39 C-375 15 -300 15 -225 39 S-75 63 0 39 150 15 225 39 375 63 450 39 600 15 675 39 825 63 900 39 1050 15 1125 39 1275 63 1350 39" fill="none" stroke="url(#waveGrad)" stroke-width="2.4" stroke-linecap="round" />
+  </g>
+
+  <g class="left" opacity="0.58">
+    <path d="M-450 47 C-360 31 -270 31 -180 47 S0 63 90 47 270 31 360 47 540 63 630 47 810 31 900 47 1080 63 1170 47 1350 31 1440 47" fill="none" stroke="url(#softGrad)" stroke-width="1.5" stroke-linecap="round" />
+  </g>
 </svg>
