@@ -51,4 +51,5 @@
   </g>
   <circle cx="560" cy="132" r="18" fill="#7c3aed" fill-opacity="0.3" stroke="#a78bfa" stroke-opacity="0.72" />
   <path d="M520 194 C570 166 610 170 660 204" fill="none" stroke="#00d4ff" stroke-opacity="0.34" stroke-width="2" />
+  <text x="660" y="214" font-size="18" fill="#e3b341" text-anchor="end">★</text>
 </svg>
